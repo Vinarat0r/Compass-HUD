@@ -8,28 +8,28 @@
 
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\..\..\Games\EscapeFromTarkov - SteamGG.NET\EscapeFromTarkov - SteamGG.NET\EscapeFromTarkov\EscapeFromTarkov_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="BepInEx">
-      <HintPath>..\..\..\..\..\..\Games\EscapeFromTarkov - SteamGG.NET\EscapeFromTarkov - SteamGG.NET\EscapeFromTarkov\BepInEx\core\BepInEx.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\BepInEx.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\..\..\Games\EscapeFromTarkov - SteamGG.NET\EscapeFromTarkov - SteamGG.NET\EscapeFromTarkov\EscapeFromTarkov_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\..\..\..\Games\EscapeFromTarkov - SteamGG.NET\EscapeFromTarkov - SteamGG.NET\EscapeFromTarkov\EscapeFromTarkov_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ImageConversionModule">
-      <HintPath>..\..\..\..\..\..\Games\EscapeFromTarkov - SteamGG.NET\EscapeFromTarkov - SteamGG.NET\EscapeFromTarkov\EscapeFromTarkov_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\UnityEngine.ImageConversionModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>..\..\..\..\..\..\Games\EscapeFromTarkov - SteamGG.NET\EscapeFromTarkov - SteamGG.NET\EscapeFromTarkov\EscapeFromTarkov_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\UnityEngine.IMGUIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.InputLegacyModule">
-      <HintPath>..\..\..\..\..\..\Games\EscapeFromTarkov - SteamGG.NET\EscapeFromTarkov - SteamGG.NET\EscapeFromTarkov\EscapeFromTarkov_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\UnityEngine.InputLegacyModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>..\..\..\..\..\..\Games\EscapeFromTarkov - SteamGG.NET\EscapeFromTarkov - SteamGG.NET\EscapeFromTarkov\EscapeFromTarkov_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\UnityEngine.TextRenderingModule.dll</HintPath>
     </Reference>
   </ItemGroup>
 
