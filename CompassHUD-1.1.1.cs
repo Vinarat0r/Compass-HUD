@@ -8,7 +8,7 @@ using EFT;
 using EFT.Interactive;
 using UnityEngine;
 
-[BepInPlugin("com.vinarators.compasshud", "Compass HUD", "1.1.0")]
+[BepInPlugin("com.vinarators.compasshud", "Compass HUD", "1.1.1")]
 public class CompassHUD : BaseUnityPlugin
 {
     public enum MarkerType
@@ -57,6 +57,7 @@ public class CompassHUD : BaseUnityPlugin
     private ConfigEntry<bool> showQuests;
     private ConfigEntry<bool> independentMarkerSize;
     private ConfigEntry<float> markerScale;
+    private ConfigEntry<float> compassYPosition;
 
     private List<MarkerTarget> activeMarkers = new List<MarkerTarget>();
     private List<ExfiltrationPoint> cachedExfils = new List<ExfiltrationPoint>();
@@ -82,6 +83,7 @@ public class CompassHUD : BaseUnityPlugin
         showQuests = Config.Bind("UI Markers", "Show Quests", false, "Show quest targets on compass");
         independentMarkerSize = Config.Bind("UI Markers", "Independent Marker Size", false, "Disable distance-based scaling for markers");
         markerScale = Config.Bind("UI Markers", "Marker Scale", 1.21f, "Scale factor for markers and icons");
+        compassYPosition = Config.Bind("Appearance", "Vertical Position", 0.0f, new ConfigDescription("Vertical compass position: 0% at the top, 100% at the bottom", new AcceptableValueRange<float>(0.0f, 1.0f)));
 
         compassStyle = new GUIStyle();
         compassStyle.fontStyle = FontStyle.Bold;
@@ -738,11 +740,16 @@ public class CompassHUD : BaseUnityPlugin
             return;
 
         float centerX = Screen.width / 2f;
-        float topY = 6f;
         float width = 900f * scale.Value;
         bool markersActive = showExtractions.Value || showTransits.Value || showQuests.Value;
         float yOffset = (markersActive ? 4f : 8f) * scale.Value;
         float height = (markersActive ? 75f : 56f) * scale.Value;
+
+        float maxHudHeight = height + 4f + 20f * scale.Value;
+        float minY = 6f;
+        float maxY = Screen.height - maxHudHeight - 6f;
+        float topY = Mathf.Lerp(minY, maxY, compassYPosition.Value);
+
         float centralY = topY + (markersActive ? 14f : 8f) * scale.Value;
 
         Color oldColor = GUI.color;
